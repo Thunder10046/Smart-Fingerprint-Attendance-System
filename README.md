@@ -1,15 +1,16 @@
-# Smart Fingerprint Attendance System (ESP32)
+# Smart Fingerprint Attendance System
 
 **Author:** Shah Ahmed Raad  
 **GitHub:** [Thunder10046](https://github.com/Thunder10046?tab=repositories)  
-
+**Industrial Attachment Project - GizanTech 
 ---
 
 ## Overview
 This project implements a Smart Fingerprint Attendance System using the ESP32 microcontroller and a fingerprint sensor.  
+
 It provides:
 
-- Fingerprint-based authentication  
+- Fingerprint-based enrollment  
 - Real-time attendance logging to a remote MySQL server  
 - Offline storage in SPIFFS when Wi-Fi is unavailable  
 - Auto-sync of offline data once Wi-Fi reconnects  
@@ -18,12 +19,13 @@ It provides:
 
 ---
 
-## Screenshots
+
+## Screenshots 
 
 ### Web Frontend (PHP `index.php`)
 ![Frontend Screenshot](frontend_screenshot.png)
 
-Example: Attendance table showing employee ID, name, and timestamp.
+
 
 ---
 
@@ -45,7 +47,12 @@ Example: Attendance table showing employee ID, name, and timestamp.
 | TX                 | GPIO16    |
 | RX                 | GPIO17    |
 
-### Configure Wi-Fi
+### Configure Server URL
 ```cpp
 const char* ssid = "YourWiFiSSID";
 const char* password = "YourWiFiPassword";
+
+### Configure Wi-Fi
+```cpp
+const char* serverName = "http://<your-server-ip>/attendance_app/index.php";
+

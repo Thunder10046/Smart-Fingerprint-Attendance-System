@@ -2,7 +2,7 @@
 
 **Author:** Shah Ahmed Raad  
 **GitHub:** [Thunder10046](https://github.com/Thunder10046?tab=repositories)  
-**Industrial Attachment Project - GizanTech 
+Industrial Attachment Project - GizanTech 
 ---
 
 ## Overview

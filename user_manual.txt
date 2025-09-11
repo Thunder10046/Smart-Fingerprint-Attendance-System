@@ -1,0 +1,59 @@
+Step 1: Hardware Connections
+
+Connect Fingerprint Sensor to ESP32:
+VCC → 3.3V
+GND → GND
+TX → GPIO16 (RXD2)
+RX → GPIO17 (TXD2)
+
+
+
+Step 2: Configure Wi-Fi
+
+Edit the code with your Wi-Fi credentials: 
+const char* ssid = "YourWiFiSSID";  
+const char* password = "YourWiFiPassword";  
+
+
+
+Step 3: Configure Server URL
+
+Replace with your machine's IPv4 address in code: 
+const char* serverName = "http://<your-server-ip>/attendance_app/index.php"; 
+
+Also, open xampp and run Apache and MySQL. After, go to htdocs (where xampp is generally installed in machine i.e. C: drive), create a new folder name attendace_app. Inside the folder, paste the index.php. Also, use the attached sql file to import the DB.      
+
+
+
+Step 4: Compile & Upload
+
+Select ESP32 Dev Module in Arduino IDE.
+Upload the sketch to ESP32 via USB.
+Open Serial Monitor at 115200 baud.
+
+
+
+Usage Instructions
+
+Fingerprint Enrollment
+1. After boot, the Serial Monitor asks for an ID (1–127).
+2. Place the same finger twice on the sensor.
+3. The system stores it in memory and assigns it to that ID. 
+
+
+
+Offline Operation
+
+1. If Wi-Fi disconnects, records are stored in /sensor_log.txt on SPIFFS. Once Wi-Fi is restored, all offline records are automatically uploaded.
+
+
+OTA Update
+
+Ensure ESP32 and your PC are connected to the same Wi-Fi.
+In Arduino IDE:
+Select Network Ports → ESP32-Attendance.
+Upload new firmware wirelessly.
+OTA Password: Thunder_2003042 
+
+
+

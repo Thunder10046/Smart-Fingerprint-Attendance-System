@@ -51,9 +51,6 @@ It provides:
 ```cpp
 const char* ssid = "YourWiFiSSID";
 const char* password = "YourWiFiPassword";
-```cpp
 
-### Configure Server URL
-```cpp
-const char* serverName = "http://<your-server-ip>/attendance_app/index.php";
+
 

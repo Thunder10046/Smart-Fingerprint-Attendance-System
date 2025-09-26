@@ -31,7 +31,7 @@ It provides:
 
 ## Database Design
 
-### ER Diagram
+
 ![Database ER Diagram](db_er_diagram.png)
 
 
